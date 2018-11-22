@@ -1,6 +1,6 @@
 .grid1 {
     display: grid;
-    grid-template-columns: 30px 150px auto 30px;
+    grid-template-columns: 30px 120px auto 300px 30px;
     grid-template-rows: auto auto auto;
 }
 
@@ -8,7 +8,10 @@
     grid-column: 3;
     grid-row: 1;
     margin: 0;
-    padding: 25px;
+    padding: 45px;
+    color: white;
+    font-size: 50px;
+    font-weight: 1000;
 }
 
 #item2 {
@@ -16,28 +19,56 @@
     grid-row: 1;
     height: 100px;
     width: 115px;
-    margin: 0;
-    border-color: white;
+    margin-top: 25px;
+    border-color: transparent;
+    border-radius: 10px;
+    filter: opacity(0.8)
+}
+#itemSearch {
+    grid-column: 4;
+    grid-row: 1;
+    margin-top: 55px; 
 }
 
 #item3 {
-    grid-column: 2/span 2;
+    grid-column: 2/span 3;
     grid-row: 2;
     margin-top: -15px;
 }
 
 #itemBooksContainer {
-    grid-column: 2/span 2;
+    grid-column: 2/span 3;
     grid-row: 2;
 }
 
 #itemFooter {
-    grid-column: 2/span 2;
+    grid-column: 1/span 5;
     grid-row: 3;
-    background-color: cadetblue;
+    background-color: rgb(55, 118, 120);
     padding: 30px;
     text-align: center;
     font-weight: bolder;
+    color: black;
+}
+#mySearch {
+    background-color: white;
+    color: cadetblue;
+    font-weight: 600;
+    border-style: solid;
+    border-color: cadetblue;
+}
+
+#mySearch:hover {
+    background-color: cadetblue;
+    color:white;  
+}
+.myHeader {
+    background-image: url(books.jpg);
+    filter: saturate(0.9);
+}
+#myMain {
+    background-color: rgb(115, 178, 180);
+    filter: saturate(0.95);
 }
 
 h5 {
@@ -47,63 +78,47 @@ h5 {
 }
 
 p {
-    margin: 5px 15px 10px 15px;
+    margin: 0px 15px 0px 15px;
     font-size: 13px;
     text-align: left;
     font-stretch: ultra-condensed;
 }
 
 .myButton {
-    margin-bottom: 15px;
+    margin: 0px 0px 0px 0px;
     height: 30px;
     align-self: flex-end;
     background-color: white;
-    color: black;
-    padding: 2px;
-    
+    color: rgb(35, 98, 100);
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 3px;
+}
+.myButton:hover {
+    text-decoration: none;
+    background-color: darkorange;
+    color: rgb(55, 118, 120);
 }
 
 img {
     height: 300px;
     width: 203px;
     border-style: solid;
-    border-color: darkslategray;
+    border-color: rgb(17, 49, 49);
     border-width: 3px;
+}
+
+.imglist {
+    max-width: 1000px;
 }
 
 #putBooks {
     display: flex;
     flex-wrap: wrap;
-    background-color: darkslategray;
+    background-color: rgb(17, 49, 49);
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
-
-/*
-    transition: 0.70s;
-    -webkit-transition: 0.70s;
-    -moz-transition: 0.70s;
-    -ms-transition: 0.70s;
-    -o-transition: 0.70s;
-    
-    
-    
-}
-
-img:hover {
-    transition: 0.70s;
-    -webkit-transition: 0.70s;
-    -moz-transition: 0.70s;
-    -ms-transition: 0.70s;
-    -o-transition: 0.70s;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-*/
 
 .flip-card {
     background-color: transparent;
@@ -113,7 +128,6 @@ img:hover {
 }
 
 .flip-card-inner {
-    position: relat;
     width: 203px;
     height: 300px;
     transition: transform 0.6s;
@@ -131,9 +145,7 @@ img:hover {
     width: 200px;
     height: 300px;
     backface-visibility: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
 }
 
 .flip-card-front {
@@ -143,8 +155,12 @@ img:hover {
 }
 
 .flip-card-back {
-    background-color: cadetblue;
+    background-color: rgb(55, 118, 120);
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     transform: rotateY(180deg);
     z-index: 1;
 }
+RGB 65, 128, 130
